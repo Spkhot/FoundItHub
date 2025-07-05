@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | FoundIt Hub by NOVA MINDS</title>
+  
+  <link rel="icon" href="logo.png">
+
+  <meta name="description" content="Learn about FoundIt Hub, a platform to help people report lost and found items. Discover our mission to reunite people with their belongings through kindness and technology.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Enhanced navbar animation */
+    #navbar {
+      transition: all 0.4s ease, transform 0.4s ease;
+    }
+
+    #navbar.scrolled {
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    #navbar.slide-up {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .hero-bg-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Cpath d='M0 0h60v60H0zM6 6v48h48V6H6zm2 2h44v44H8V8zm10 10v24h24V18H18zm2 2h20v20H20V20z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    /* Simple fade-in animation */
+    .fade-in {
+        animation: fadeIn 1s ease-out forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 text-slate-800 antialiased">
+
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="text-2xl font-bold text-sky-700 hover:text-sky-800 transition duration-300">
+              <i class="fas fa-search-dollar mr-2"></i>FoundIt Hub
+            </a>
+          </div>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-slate-600 hover:text-sky-500 transition-colors duration-200 font-medium">Home</a>
+            <a href="about.html" class="text-sky-500 font-semibold">About</a>
+          </div>
+          
+          <div class="flex items-center">
+            <a href="post-found.html" class="hidden md:inline-block bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:bg-sky-600 transition-all duration-300 hover:shadow-lg">
+              Post Item
+            </a>
+            <button id="mobile-menu-button" class="md:hidden ml-4 p-2 text-slate-600 rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+                <span class="sr-only">Open main menu</span>
+                <svg id="hamburger-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="mobile-menu" class="hidden md:hidden">
+        <div class="h-screen w-screen bg-white pt-12 pb-3 space-y-1 text-center">
+          <a href="index.html" class="block px-3 py-4 text-2xl font-medium text-slate-600 hover:text-sky-500 hover:bg-slate-50">Home</a>
+          <a href="about.html" class="block px-3 py-4 text-2xl font-medium text-sky-500 bg-sky-50">About</a>
+          <div class="pt-12">
+              <a href="post-found.html" class="inline-block w-3/4 bg-sky-500 text-white px-8 py-4 text-lg rounded-lg font-bold shadow-lg hover:bg-sky-600">
+                <i class="fas fa-plus-circle mr-2"></i> Post Found Item
+              </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="text-center px-6 py-24 bg-gradient-to-r from-sky-50 via-white to-blue-50 hero-bg-pattern relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-sky-100/30 to-blue-100/30"></div>
+      <div class="relative z-10 fade-in">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight">
+          Reconnecting People<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-700">One Lost Item at a Time</span>
+        </h1>
+        <p class="mt-8 text-xl text-slate-700 max-w-3xl mx-auto">
+         <strong class="text-sky-700">FOUNDITHUB</strong>, is a compassionate platform designed to simplify the process of reporting, requesting, and recovering lost or found items in your community. Powered by <strong class="text-sky-700">NOVA MINDS</strong>, our mission is to foster kindness and effortlessly reunite people with their cherished belongings.
+        </p>
+        <div class="mt-10 flex justify-center space-x-4">
+          <a href="#how-it-started" class="bg-sky-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition duration-300 transform hover:scale-105">
+            Our Story <i class="fas fa-arrow-down ml-2"></i>
+          </a>
+          <a href="#how-it-started" class="bg-sky-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-sky-700 transition duration-300 transform hover:scale-105">
+            Meet the Founder<i class="fas fa-arrow-down ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    ---
+
+    <section id="how-it-started" class="py-20 px-6 bg-white shadow-inner">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="fade-in">
+          <h2 class="text-4xl font-bold text-slate-800 mb-6 border-b-4 border-sky-500 pb-2 inline-block">The Spark: How It All Started</h2>
+          <p class="text-slate-700 text-lg leading-relaxed">
+            In a world filled with countless daily interactions, we realized there was a critical need for a simple, secure, and genuinely honest way to connect lost possessions with their rightful owners. We envisioned a platform that could ease the panic of a lost item and transform it into the relief of a successful reunion. Whether it's a misplaced wallet, a forgotten ID, or a beloved toy, <strong class="text-sky-700">FOUNDITHUB</strong> was conceived to bridge that gap and amplify small acts of kindness across communities.
+          </p>
+          <div class="mt-8 bg-sky-50 border-l-4 border-sky-500 p-6 rounded-r-lg shadow-md">
+            <p class="text-slate-700 font-semibold text-xl italic leading-relaxed">
+              <i class="fas fa-quote-left text-sky-500 mr-2"></i>"Every item has a story, and often, an emotional connection. Our greatest reward is completing that circle by returning it to its owner."<i class="fas fa-quote-right text-sky-500 ml-2"></i>
+            </p>
+          </div>
+        </div>
+        <div class="fade-in">
+          <img src="soham.png" alt="An illustration representing connection and community through lost and found items" class="rounded-3xl shadow-2xl object-cover w-full h-96 transform hover:scale-105 transition duration-500 ease-in-out group-hover:blur-sm" />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                Our Foundational Principles
+            </h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
+                Every feature and decision at FoundIt Hub is guided by these core beliefs.
+            </p>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+                        <i class="fas fa-handshake fa-2x"></i>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Community Empowerment</h3>
+                    <p class="mt-2 text-base text-slate-600">We believe in the power of local communities to help each other. FoundIt Hub provides the tools to connect those who find with those who've lost.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+                        <i class="fas fa-laptop-code fa-2x"></i>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">User-Friendly Design</h3>
+                    <p class="mt-2 text-base text-slate-600">Our platform is designed to be intuitive and easy to use for everyone, regardless of tech savviness. Posting or searching should be quick and stress-free.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="inline-flex items-center justify-center h-12 w-12 rounded-lg bg-sky-100 text-sky-600">
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                    </div>
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">Integrity & Privacy</h3>
+                    <p class="mt-2 text-base text-slate-600">We prioritize a secure environment for all users. Your privacy is respected, and we strive to foster an honest space for item reunification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section class="bg-gradient-to-br from-sky-600 to-blue-700 text-white py-20 text-center shadow-lg">
+      <h2 class="text-4xl font-bold mb-4 animate-pulse">Join the Movement of Kindness</h2>
+      <p class="mt-4 text-xl max-w-2xl mx-auto">
+        Start helping today or find what you've lost. Every connection makes our community stronger.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+        <a href="post-found.html" class="inline-block bg-white text-sky-700 font-extrabold py-4 px-10 rounded-full shadow-xl hover:bg-slate-100 transition duration-300 transform hover:scale-105 text-lg">
+          <i class="fas fa-plus-circle mr-2"></i> Post Found Item
+        </a>
+        <a href="post-request.html" class="inline-block bg-transparent border-2 border-white text-white font-extrabold py-4 px-10 rounded-full shadow-xl hover:bg-white hover:text-sky-700 transition duration-300 transform hover:scale-105 text-lg">
+          <i class="fas fa-question-circle mr-2"></i> Post Lost Request
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-800 border-t border-slate-700 py-8 text-center text-sm text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+      <p>&copy; <span id="current-year"></span> FoundIt Hub. All rights reserved.</p>
+      <p class="mt-2 sm:mt-0">Built with <span class="text-red-500">&hearts;</span> by <strong class="text-sky-500 hover:text-sky-400 transition duration-300">NOVA MINDS</strong></p>
+      <div class="mt-4 sm:mt-0 flex space-x-4">
+        <a href="#" class="text-slate-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-slate-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-slate-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      const navbar = document.getElementById('navbar');
+
+      if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
+
+        if (currentScroll > lastScrollTop) {
+          // Scrolling down
+          navbar.classList.add('slide-up');
+        } else {
+          // Scrolling up
+          navbar.classList.remove('slide-up');
+        }
+      } else {
+        navbar.classList.remove('scrolled');
+        navbar.classList.remove('slide-up');
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden'); // Prevent background scroll
+    });
+
+    // Update current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    window.fwSettings={
+    'widget_id':1130000000133 // Replace with FoundIt Hub's widget ID if different
+    };
+    !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
+  </script>
+  <script type='text/javascript' src='https://ind-widget.freshworks.com/widgets/1130000000133.js' async defer></script>
+</body>
+</html>
